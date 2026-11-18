@@ -24,7 +24,10 @@ export const Route = createRootRoute({
           'Research-based restaurant profiles from Barranquilla, Colombia, grouped into fast food and gourmet rankings.',
       },
     ],
-    links: [{ rel: 'stylesheet', href: appCss }],
+    links: [
+      { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+      { rel: 'stylesheet', href: appCss },
+    ],
   }),
   errorComponent: DefaultCatchBoundary,
   notFoundComponent: () => <NotFound />,
