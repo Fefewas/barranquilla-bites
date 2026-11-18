@@ -36,7 +36,7 @@ export default function Hero() {
         className="absolute inset-0 bg-gradient-to-br from-stone-950 via-amber-950 to-orange-900"
       />
       <img
-        src="https://media.hellofresh.com/w_3840,q_auto,f_auto,c_limit,fl_lossy/hellofresh_website/es/cms/SEO/recipes/gourmet/entrecot-de-ternera.jpeg"
+        src="/images/hero/entrecot.jpg"
         alt=""
         aria-hidden="true"
         fetchPriority="high"
