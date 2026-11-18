@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Inter:wght@300;400;500;600;700&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-pulse: hsl(var(--pulse));
+  --color-pulse-foreground: hsl(var(--pulse-foreground));
+  --color-ritual: hsl(var(--ritual));
+  --color-ritual-foreground: hsl(var(--ritual-foreground));
+  --color-sand: hsl(var(--sand));
+  --color-ink: hsl(var(--ink));
+  --color-chart-1: hsl(var(--chart-1));
+  --color-chart-2: hsl(var(--chart-2));
+  --color-chart-3: hsl(var(--chart-3));
+  --color-chart-4: hsl(var(--chart-4));
+  --color-chart-5: hsl(var(--chart-5));
+  --color-sidebar-background: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+  --font-display: var(--app-font-display);
+  --font-heading: var(--app-font-heading);
+  --font-body: var(--app-font-body);
+  --font-mono: var(--app-font-mono);
+}
+
+@layer base {
+  :root {
+    --background: 43 37% 96%;
+    --foreground: 240 3% 10%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 3% 10%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 3% 10%;
+    --primary: 240 3% 10%;
+    --primary-foreground: 43 37% 96%;
+    --secondary: 42 32% 92%;
+    --secondary-foreground: 240 3% 10%;
+    --muted: 42 30% 91%;
+    --muted-foreground: 33 6% 40%;
+    --accent: 42 32% 92%;
+    --accent-foreground: 240 3% 10%;
+    --destructive: 0 72% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 22% 87%;
+    --input: 40 22% 87%;
+    --ring: 240 3% 10%;
+    --pulse: 17 100% 56%;
+    --pulse-foreground: 0 0% 100%;
+    --ritual: 113 40% 25%;
+    --ritual-foreground: 0 0% 100%;
+    --sand: 43 37% 96%;
+    --ink: 240 3% 10%;
+    --chart-1: 17 100% 56%;
+    --chart-2: 113 40% 25%;
+    --chart-3: 33 40% 55%;
+    --chart-4: 190 35% 45%;
+    --chart-5: 43 60% 60%;
+    --radius: 0.5rem;
+    --app-font-display: 'Fraunces', ui-serif, Georgia, serif;
+    --app-font-heading: 'Fraunces', ui-serif, Georgia, serif;
+    --app-font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
+    --app-font-mono:
+      ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+      'Courier New', monospace;
+    --sidebar-background: 42 32% 94%;
+    --sidebar-foreground: 240 3% 15%;
+    --sidebar-primary: 240 3% 10%;
+    --sidebar-primary-foreground: 43 37% 96%;
+    --sidebar-accent: 42 30% 88%;
+    --sidebar-accent-foreground: 240 3% 10%;
+    --sidebar-border: 40 22% 87%;
+    --sidebar-ring: 240 3% 10%;
+  }
+
+  .dark {
+    --background: 240 5% 8%;
+    --foreground: 43 25% 94%;
+    --card: 240 5% 11%;
+    --card-foreground: 43 25% 94%;
+    --popover: 240 5% 11%;
+    --popover-foreground: 43 25% 94%;
+    --primary: 43 37% 96%;
+    --primary-foreground: 240 5% 10%;
+    --secondary: 240 5% 16%;
+    --secondary-foreground: 43 25% 94%;
+    --muted: 240 5% 16%;
+    --muted-foreground: 40 10% 68%;
+    --accent: 240 5% 18%;
+    --accent-foreground: 43 25% 94%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 5% 22%;
+    --input: 240 5% 22%;
+    --ring: 43 25% 94%;
+    --pulse: 17 95% 60%;
+    --pulse-foreground: 240 5% 8%;
+    --ritual: 113 28% 48%;
+    --ritual-foreground: 240 5% 8%;
+    --sand: 240 5% 8%;
+    --ink: 43 25% 94%;
+    --radius: 0.5rem;
+    --sidebar-background: 240 5% 11%;
+    --sidebar-foreground: 43 25% 94%;
+    --sidebar-primary: 17 95% 60%;
+    --sidebar-primary-foreground: 240 5% 8%;
+    --sidebar-accent: 240 5% 18%;
+    --sidebar-accent-foreground: 43 25% 94%;
+    --sidebar-border: 240 5% 22%;
+    --sidebar-ring: 43 25% 94%;
+  }
+}
+
+@layer base {
+  * {
+    border-color: hsl(var(--border));
+    outline-color: hsl(var(--ring) / 50%);
+  }
+
+  body {
+    background-color: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--app-font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  :focus-visible {
+    outline: 2px solid hsl(var(--ink));
+    outline-offset: 3px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Accent utilities and photographic scrims.
+   Theme tokens are mapped in the @theme block above. These rules provide
+   explicit CSS for the project-specific accent and scrim utilities.
+--------------------------------------------------------------------------- */
+.bg-pulse {
+  background-color: hsl(var(--pulse));
+}
+
+.bg-ritual {
+  background-color: hsl(var(--ritual));
+}
+
+.text-pulse {
+  color: hsl(var(--pulse));
+}
+
+.text-ritual {
+  color: hsl(var(--ritual));
+}
+
+.text-ink {
+  color: hsl(var(--ink));
+}
+
+.text-pulse-foreground {
+  color: hsl(var(--pulse-foreground));
+}
+
+.text-ritual-foreground {
+  color: hsl(var(--ritual-foreground));
+}
+
+.ring-pulse {
+  --tw-ring-color: hsl(var(--pulse));
+}
+
+.ring-ritual {
+  --tw-ring-color: hsl(var(--ritual));
+}
+
+.scrim-hero {
+  background-image: linear-gradient(
+    to top,
+    hsl(var(--ink) / 0.94),
+    hsl(var(--ink) / 0.6) 45%,
+    hsl(var(--ink) / 0.22)
+  );
+}
+
+.scrim-panel {
+  background-image: linear-gradient(
+    to top,
+    hsl(var(--ink) / 0.92),
+    hsl(var(--ink) / 0.5) 55%,
+    hsl(var(--ink) / 0.06)
+  );
+}
+
+.veil {
+  background-color: hsl(var(--ink) / 0.95);
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fade-up 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* Reading-progress bar: pulse → ink → ritual. */
+.progress-accent {
+  background-image: linear-gradient(
+    to right,
+    hsl(var(--pulse)),
+    hsl(var(--ink)) 50%,
+    hsl(var(--ritual))
+  );
+}
+
+/* Light sweeping across a photograph on card hover. */
+.shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: linear-gradient(
+    105deg,
+    hsl(0 0% 100% / 0) 35%,
+    hsl(0 0% 100% / 0.32) 50%,
+    hsl(0 0% 100% / 0) 65%
+  );
+  transform: translateX(-130%);
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.group:hover .shine::after {
+  transform: translateX(130%);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 44s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    hsl(0 0% 0%) 6%,
+    hsl(0 0% 0%) 94%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    hsl(0 0% 0%) 6%,
+    hsl(0 0% 0%) 94%,
+    transparent
+  );
+}
+
+/* Translucent surfaces used by the header, section bands, and hover rows. */
+.bg-background\/85 {
+  background-color: hsl(var(--background) / 0.85);
+}
+
+.bg-background\/90 {
+  background-color: hsl(var(--background) / 0.9);
+}
+
+.bg-background\/95 {
+  background-color: hsl(var(--background) / 0.95);
+}
+
+.bg-muted\/40 {
+  background-color: hsl(var(--muted) / 0.4);
+}
+
+.bg-muted\/50 {
+  background-color: hsl(var(--muted) / 0.5);
+}
+
+.bg-muted\/60 {
+  background-color: hsl(var(--muted) / 0.6);
+}
+
+.border-border\/60 {
+  border-color: hsl(var(--border) / 0.6);
+}
+
+.border-background\/15 {
+  border-color: hsl(var(--background) / 0.15);
+}
+
+.text-background\/60 {
+  color: hsl(var(--background) / 0.6);
+}
+
+.hover\:bg-muted\/40:hover {
+  background-color: hsl(var(--muted) / 0.4);
+}
+
+.hover\:border-foreground\/25:hover {
+  border-color: hsl(var(--foreground) / 0.25);
+}
